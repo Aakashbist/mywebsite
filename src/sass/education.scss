@@ -1,0 +1,88 @@
+.education {
+  display: flex;
+  direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color:transparent;
+  color:  $primary-black;
+  font-family: 'Patrick Hand', sans-serif;
+  font-family: 'Patrick Hand', sans-serif;
+  padding: 20px;
+
+  &__long_card{
+    max-width: 400px;
+    margin:  0 auto;
+  }
+
+  .title{
+        color:$primary-black;
+        font-family: 'Patrick Hand', sans-serif;
+        font-weight: 800;
+        letter-spacing: 0;
+        font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+        line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+        text-align: center;
+  }
+  &__logo_image{
+    max-width: 360px;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    display: block;
+    text-decoration: none;
+    color: $primary-black;
+    padding: 1rem;
+    }
+  &__statement_text{
+        color:$primary-black;
+        font-family: 'Patrick Hand', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0;
+        font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+        line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+        text-align: center;
+  }
+
+    &__row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .education {
+    #selector{
+      margin-top: 10px;
+    }
+    &__logo_image {
+      max-width: 300px !important;
+    }
+
+    &__statement_text{
+      max-width: 80vw;
+      padding-left: 2vw !important;
+      padding-right: 2vw !important;
+    }
+    &__long_card{
+      max-width: 80vw;
+      margin:  0 auto;
+    }
+  }
+}
+
+

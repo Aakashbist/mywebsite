@@ -1,0 +1,161 @@
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color:transparent;
+    color:  $lightGrey;
+    font-family: 'Patrick Hand', sans-serif;
+    padding: 10px;
+
+
+        &__brand-title{
+            font-weight: 400;
+            letter-spacing: 0;
+            padding-left: 20px;
+            font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+            line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+            text-align: left;
+            text-transform: uppercase;
+            color: $primary-black;
+
+        }
+
+        &__links {
+            font-weight: 200;
+            font-size: calc(16px + 1 * ((100vw - 320px) / 680));
+            line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+            text-align: left;
+            padding-right: 20px;
+            }
+
+            &__list{
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+
+            &__link {
+                list-style: none;
+                display: block;
+                text-decoration: none;
+                color: $primary-black;
+                padding: 1rem;
+                }
+
+            &__link:hover {
+            background-color:#7a7777;
+            }
+
+            // &__current {
+            //     border-bottom: 4px solid black;
+            // }
+
+            .toggler {
+                    position: absolute;
+                    top: .2rem;
+                    right: 1.5rem;
+                    z-index: 2;
+                    width: 50px;
+                    height: 50px;
+                    opacity: 0;
+                }
+
+                .hamburger {
+                    position: absolute;
+                    top: .2rem;
+                    right: 1.5rem;
+                    z-index: 1;
+                    width: 60px;
+                    height: 60px;
+                    padding: 1rem;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+
+                .hamburger > div {
+                    position: relative;
+                    flex: none;
+                    width: 100%;
+                    height: 2px;
+                    background:$primary-black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.4s ease;
+                }
+
+                /* Hamburger Lines - Top & Bottom */
+                .hamburger > div:before,
+                .hamburger > div:after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: -10px;
+                    width: 100%;
+                    height: 2px;
+                    background: inherit;
+                }
+
+                /* Moves Line Down */
+            .hamburger > div::after {
+                    top: 10px;
+                }
+                input[type=checkbox]:checked + .hamburger > div {
+                    transform: rotate(135deg);
+                }
+
+                /* Turns Lines Into X */
+                .toggler:checked + .hamburger > div:before,
+                .toggler:checked + .hamburger > div:after {
+                    top: 0;
+                    transform: rotate(90deg);
+                }
+
+
+            .toggler:checked ~ .navbar__links{
+                    display:flex;
+                }
+
+
+
+    }
+
+    @media screen and (max-width: 850px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+
+        .hamburger{display: flex;}
+
+
+        &__brand-title{
+            font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+            line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+        }
+
+        &__links {
+            display: none;
+            width: 100%;
+            font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+            line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+
+        }
+
+        &__list {
+            width: 100%;
+            flex-direction: column;
+
+        }
+
+        &__link {
+            text-align: center;
+            padding: .5rem 1rem;
+        }
+
+
+    }
+}
