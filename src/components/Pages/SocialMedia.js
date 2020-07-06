@@ -13,19 +13,19 @@ function SocialMedia() {
         <div >
             <Grid container justify="center" spacing={3}>
                 <Grid item >
-                    <a href={"mailto:" + contactInfo.emailId} rel="noopener noreferrer" ><EmailRounded fontSize="large" color="action" /></a>
+                    <a href={"mailto:" + contactInfo.emailId} rel="noopener noreferrer" ><EmailRounded className="socialMediaIcon" /></a>
                 </Grid>
                 <Grid item >
-                    <a href={"tel:" + contactInfo.number} rel="noopener noreferrer" ><Call fontSize="large" color="action" /></a>
+                    <a href={"tel:" + contactInfo.number} rel="noopener noreferrer" ><Call className="socialMediaIcon" /></a>
                 </Grid>
                 <Grid item >
-                    <a href={contactInfo.linkedAccounts.github} target="_blank" rel="noopener noreferrer"><GitHub fontSize="large" color="action" /></a>
+                    <a href={contactInfo.linkedAccounts.github} target="_blank" rel="noopener noreferrer"><GitHub className="socialMediaIcon" /></a>
                 </Grid>
                 <Grid item >
-                    <a href={contactInfo.linkedAccounts.linkedIn} target="_blank" rel="noopener noreferrer"><LinkedIn fontSize="large" color="action" /></a>
+                    <a href={contactInfo.linkedAccounts.linkedIn} target="_blank" rel="noopener noreferrer"><LinkedIn className="socialMediaIcon" /></a>
                 </Grid>
                 <Grid item >
-                    <a href={contactInfo.linkedAccounts.playStore} target="_blank" rel="noopener noreferrer"><ShopTwo fontSize="large" color="action" /></a>
+                    <a href={contactInfo.linkedAccounts.playStore} target="_blank" rel="noopener noreferrer"><ShopTwo className="socialMediaIcon" /></a>
                 </Grid>
             </Grid>
         </div>

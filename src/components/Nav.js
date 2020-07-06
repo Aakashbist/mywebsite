@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { PATHS } from "../constants/AppRoute";
+import paths from "../constants/AppRoute";
 
 function Nav() {
 
@@ -10,6 +10,9 @@ function Nav() {
         //alert(!toggle)
 
     }
+    useEffect(() => {
+
+    }, [])
     return (
         <nav className="navbar">
             <div className="navbar__brand-title">
@@ -23,10 +26,10 @@ function Nav() {
             <div className="navbar__links " >
                 <ul className="navbar__list">
 
-                    <NavLink className="navbar__link" activeClassName="navbar__current" to={PATHS.HOME}>Home</NavLink>
-                    <NavLink className="navbar__link" activeClassName="navbar__current" to={PATHS.EDUCATION}>Education</NavLink>
-                    <NavLink className="navbar__link" activeClassName="navbar__current" to={PATHS.EXPERIENCE}>Experience</NavLink>
-                    <NavLink className="navbar__link" activeClassName="navbar__current" to={PATHS.SKILL}>Skill</NavLink>
+                    {paths.map((path, index) => (
+                        <NavLink key={index} className="navbar__link" activeClassName="navbar__current" to={path.link}>{path.text}</NavLink>
+                    ))
+                    }
                 </ul>
             </div>
         </nav >
