@@ -16,7 +16,7 @@ function Nav() {
     return (
         <nav className="navbar">
             <div className="navbar__brand-title">
-                Aakash Bista
+                <NavLink to={"/"}> Aakash Bista</NavLink>
             </div>
 
             <input type="checkbox" className="toggler" />

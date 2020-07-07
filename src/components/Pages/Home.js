@@ -1,44 +1,65 @@
 import React from 'react';
-import { profileDetail } from '../../api/data';
-import {
-  CardMedia,
-  Container,
-  Grid,
-} from "@material-ui/core";
+
 import SocialMedia from './SocialMedia';
-import video from '../../assets/bg.mov'
+import image from '../../assets/software.svg'
 
 function Home() {
 
   return (
     <div className="home">
 
-      <Container>
-        <Grid container direction="column">
-          <Grid container direction="row" spacing={1}>
-            <div className="container">
-              <Grid  >
-                <Grid container direction="row" alignItems="center" justify="center">
-                  <img src="https://avatars3.githubusercontent.com/u/19540506?s=460&u=63d78cc69e839fec04616f03c657a620b9331880&v=4" alt="Logo" className="home__logo_image" width="70%" />
-                </Grid>
-                <Grid container direction="row" alignItems="center" justify="center" >
-                  <Grid container direction="column">
-                    <div className="home__statement_text">
-                      <h2>I'm a software developer with experience in web and android application development. I mostly love to work with Java, Kotlin, C#, React Native, SQL and Firebase</h2>
-                    </div>
-                  </Grid>
-                </Grid>
+      <div>
 
-                <div className="home__socialMedia">
-                  <SocialMedia />
-                </div>
-              </Grid>
+        <div className="container">
+
+          <div className="containSection">
+            <div className="home__statement_text">
+              <h2>I'm a software developer with experience in web and android application development. I mostly love to work with Java, Kotlin, C#, React Native, SQL and Firebase</h2>
             </div>
-          </Grid>
+            <div className="home__socialMedia">
+              <SocialMedia />
+            </div>
+          </div>
+          <div className="imageSection">
+            <img src={image} alt="Logo" className="logo_image" width="80%" />
+          </div>
+        </div>
 
-        </Grid>
-      </Container>
+      </div>
+      <div className="slider">
+
+      </div>
     </div>
+
+
+    // <div >
+    //   <div className="home">
+
+    //     <div className="container">
+
+    //       <div className="home__statement_text">
+    //         <h2>
+    //           Mobile and Web Application Developer
+    //       </h2>
+    //         <p>I'm a software developer with experience in web and android application development. I mostly love to work with Java, Kotlin, C#, React Native, SQL and Firebase
+
+    //         </p>
+    //         <div className="home__socialMedia">
+    //           <SocialMedia />
+    //         </div>
+
+    //       </div>
+    //       {/* <div className="xx">
+    //         <p>I'm a software developer with experience in web and android application development. I mostly love to work with Java, Kotlin, C#, React Native, SQL and Firebase</p>
+
+    //       </div> */}
+    //     </div>
+
+    //   </div >
+    //   <div className="image" >
+    //     {/* <img src={image} /> */}
+    //   </div>
+    // </div>
   );
 }
 

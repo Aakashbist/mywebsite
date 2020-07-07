@@ -11,7 +11,7 @@ function SocialMedia() {
 
     return (
         <div >
-            <Grid container justify="center" spacing={3}>
+            <Grid container justify="left" spacing={3}>
                 <Grid item >
                     <a href={"mailto:" + contactInfo.emailId} rel="noopener noreferrer" ><EmailRounded className="socialMediaIcon" /></a>
                 </Grid>
