@@ -1,33 +1,94 @@
 .home {
- // width: 100vw;
+  // width: 100vw;
   height: 100vh;
   display: flex;
-.socialMediaIcon{
-  color: $secondary-color;
-  font-size: calc(30px + 1 * ((100vw - 320px) / 680));
-  line-height: calc(32px + 6 * ((100vw - 320px) / 680));
-}
+  .socialMediaIcon {
+    color: $secondary-color;
+    font-size: calc(30px + 1 * ((100vw - 320px) / 680));
+    line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+  }
 
-  .container{
+  .container {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
   }
 
-  &__logo_image{
-      max-width: 300px;
-      border-radius: 50%;
-      padding-top: 40px;
+  &__logo_image {
+    max-width: 300px;
+    border-radius: 50%;
+    padding-top: 40px;
+  }
+  &__socialMedia {
+    padding-top: 30px;
+  }
+  &__statement_text {
+    padding: 30px;
+    p {
+      color: $white;
+      font-family: "Patrick Hand", sans-serif;
+      padding: 15px;
+      font-weight: 500;
+      letter-spacing: 0;
+      font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+      line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+      text-align: center;
     }
-  &__socialMedia{
-      padding-top: 30px;
+    h2 {
+      color: $white;
+      font-family: "Patrick Hand", sans-serif;
+      font-weight: 800;
+      letter-spacing: 0;
+      font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+      line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+      text-align: center;
+    }
+  }
 
+  &__row {
+    display: flex;
+    @include flex(row, space-around, center);
+    height: 100%;
+    padding: 20px;
+  }
+  &__column {
+    display: flex;
+    @include flex(column, space-between, center);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    &__statement_text {
+      max-width: 80%;
+      margin: 0 auto;
+      p {
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+      }
     }
-    &__statement_text{
+    &__link {
+      font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+      line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+}
+.experience {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .text-gray-700 {
+    background-color: $primary-light;
+    color: $white;
+
+    .statementText {
       padding: 30px;
-      p{
-        color:$white;
-        font-family: 'Patrick Hand', sans-serif;
+      p {
+        color: $white;
+        font-family: "Patrick Hand", sans-serif;
         padding: 15px;
         font-weight: 500;
         letter-spacing: 0;
@@ -35,9 +96,9 @@
         line-height: calc(32px + 6 * ((100vw - 320px) / 680));
         text-align: center;
       }
-      h2{
-        color:$white;
-        font-family: 'Patrick Hand', sans-serif;
+      h2 {
+        color: $white;
+        font-family: "Patrick Hand", sans-serif;
         font-weight: 800;
         letter-spacing: 0;
         font-size: calc(24px + 1 * ((100vw - 320px) / 680));
@@ -45,88 +106,23 @@
         text-align: center;
       }
     }
+  }
+}
 
-    &__row{
-
-      display: flex;
-      @include flex(row,space-around,center);
-      height: 100%;
-      padding: 20px;
-    }
-    &__column {
-      display: flex;
-      @include flex(column,space-between,center);
-
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .home {
+    &__statement_text {
+      max-width: 75%;
+      margin: 0 auto;
     }
   }
+}
 
-  @media screen and (max-width: 500px) {
-    .home {
-      &__statement_text {
-        max-width: 80%;
-        margin: 0 auto;
-        p {
-          font-size: calc(18px + 6 * ((100vw - 320px) / 680));
-          line-height: calc(32px + 6 * ((100vw - 320px) / 680));
-        }
-      }
-      &__link {
-        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
-        line-height: calc(32px + 6 * ((100vw - 320px) / 680));
-      }
+@media screen and (max-width: 500px) {
+  .home {
+    &__logo_image {
+      max-width: 300px !important;
+      margin-bottom: 20px;
     }
   }
-  .experience{
-    margin: 20px;
-    padding:20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    .text-gray-700 {
-      background-color: $primary-light;
-      color: $white;
-
-      .statementText{
-        padding: 30px;
-        // p{
-        //   color:$white;
-        //   font-family: 'Patrick Hand', sans-serif;
-        //   padding: 15px;
-        //   font-weight: 500;
-        //   letter-spacing: 0;
-        //   font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-        //   line-height: calc(32px + 6 * ((100vw - 320px) / 680));
-        //   text-align: center;
-        // }
-        // h2{
-        //   color:$white;
-        //   font-family: 'Patrick Hand', sans-serif;
-        //   font-weight: 800;
-        //   letter-spacing: 0;
-        //   font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-        //   line-height: calc(40px + 6 * ((100vw - 320px) / 680));
-        //   text-align: center;
-        // }
-      }
-    }
-  }
-
-  @media screen and (min-width: 501px) and (max-width: 1000px) {
-    .home {
-      &__statement_text {
-        max-width: 75%;
-        margin: 0 auto;
-      }
-    }
-  }
-
-
-  @media screen and (max-width: 500px) {
-    .home {
-      &__logo_image {
-        max-width: 300px !important;
-        margin-bottom: 20px;
-      }
-        }
-  }
+}

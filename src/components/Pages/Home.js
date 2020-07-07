@@ -21,11 +21,6 @@ function Home() {
                 <Grid container direction="row" alignItems="center" justify="center">
                   <img src="https://avatars3.githubusercontent.com/u/19540506?s=460&u=63d78cc69e839fec04616f03c657a620b9331880&v=4" alt="Logo" className="home__logo_image" width="70%" />
                 </Grid>
-
-                <div className="home__socialMedia">
-                  <SocialMedia />
-                </div>
-
                 <Grid container direction="row" alignItems="center" justify="center" >
                   <Grid container direction="column">
                     <div className="home__statement_text">
@@ -34,6 +29,9 @@ function Home() {
                   </Grid>
                 </Grid>
 
+                <div className="home__socialMedia">
+                  <SocialMedia />
+                </div>
               </Grid>
             </div>
           </Grid>

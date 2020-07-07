@@ -1,83 +1,76 @@
 .education {
-  color:  $white;
-  font-family: 'Patrick Hand', sans-serif;
-  font-family: 'Patrick Hand', sans-serif;
-  height:100vh;
+  color: $text-color;
+  font-family: "Patrick Hand", sans-serif;
+  font-family: "Patrick Hand", sans-serif;
+  height: 100vh;
 
-
-
-  .container{
-   background-color: $primary-dark;
-    margin:10px;
-    padding: 20PX;
+  .container {
+    background-color: $primary-dark;
+    margin: 10px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+    text-align: left;
   }
-  .topography{
-    padding: 20PX;
-    color:$white;
-    font-family: 'Patrick Hand', sans-serif;
+  .topography {
+    padding: 20px;
+    color: $white;
+    font-family: "Patrick Hand", sans-serif;
     font-weight: 500;
     letter-spacing: 1;
     font-size: calc(52px + 1 * ((100vw - 320px) / 680));
     line-height: calc(40px + 6 * ((100vw - 320px) / 680));
-
   }
-  .image{
+  &__image {
     justify-content: flex-end;
     align-items: center;
 
     max-width: 360px;
   }
-  .content{
+  .content {
+    padding-left: 20px;
     max-width: 360px;
   }
-  .title{
-        color:$white;
-        font-family: 'Patrick Hand', sans-serif;
-        font-weight: 800;
-        letter-spacing: 0;
-        font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-        line-height: calc(40px + 6 * ((100vw - 320px) / 680));
-        text-align: left;
+  .title {
+    color: $white;
+    font-family: "Patrick Hand", sans-serif;
+    font-weight: 800;
+    letter-spacing: 0;
+    font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+    line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+    text-align: left;
   }
 
-
-  &__statement_text{
+  &__statement_text {
     width: 100vw;
-        color:$white;
-        font-family: 'Patrick Hand', sans-serif;
-        font-weight: 500;
-        letter-spacing: 0;
-        font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-        line-height: calc(32px + 6 * ((100vw - 320px) / 680));
-        text-align: left;
+    color: $white;
+    font-family: "Patrick Hand", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0;
+    font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+    line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+    text-align: left;
   }
 }
 
-
-
 @media screen and (max-width: 600px) {
   .education {
-    .container{
+    .container {
       flex-direction: column;
       align-content: space-evenly;
-      justify-items:center;
+      justify-items: center;
+      text-align: left;
     }
-    .image{
+    .image {
       max-width: 300px !important;
       margin-bottom: 20px;
     }
 
-    &__statement_text{
+    &__statement_text {
       max-width: 80vw;
       padding-left: 2vw !important;
       padding-right: 2vw !important;
     }
-
   }
 }
-
-

@@ -6,7 +6,7 @@ function Certification({ certification }) {
     return (
         <div className="container">
 
-            <div className="image">
+            <div className="education__image">
                 <img src={certification.image} width="70%" />
             </div>
 

@@ -1,159 +1,166 @@
 .navbar {
-
+    max-width: 1920px;
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background-color:$primary-light;
-    font-family: 'Patrick Hand', sans-serif;
+    background-color: $primary-color;
+    color: $white;
+    font-family: "Patrick Hand", sans-serif;
     padding: 10px;
+    z-index: 1;
 
-        &__brand-title{
-            font-weight: 400;
-            letter-spacing: 0;
-            padding-left: 20px;
-            font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-            line-height: calc(40px + 6 * ((100vw - 320px) / 680));
-            text-align: left;
-            text-transform: uppercase;
-            color: $white;
-
-        }
-
-        &__links {
-            font-weight: 200;
-            font-size: calc(22px + 1 * ((100vw - 320px) / 680));
-            line-height: calc(40px + 6 * ((100vw - 320px) / 680));
-            text-align: left;
-            padding-right: 20px;
-            }
-
-            &__list{
-                display: flex;
-                margin: 0;
-                padding: 0;
-            }
-
-            &__link {
-                list-style: none;
-                display: block;
-                text-decoration: none;
-                color: $white;
-                padding: 1rem;
-                }
-
-            &__link:hover {
-                border: 2px solid $secondary-color;
-                ;
-                box-sizing: border-box;
-                border-radius: 20px;
-            }
-
-
-            .toggler {
-                    position: absolute;
-                    top: .2rem;
-                    right: 1.5rem;
-                    z-index: 2;
-                    width: 50px;
-                    height: 50px;
-                    opacity: 0;
-                }
-
-                .hamburger {
-                    position: absolute;
-                    top: .2rem;
-                    right: 1.5rem;
-                    z-index: 1;
-                    width: 60px;
-                    height: 60px;
-                    padding: 1rem;
-                    display: none;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                }
-
-                .hamburger > div {
-                    position: relative;
-                    flex: none;
-                    width: 100%;
-                    height: 2px;
-                    background:$white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.4s ease;
-                }
-
-                /* Hamburger Lines - Top & Bottom */
-                .hamburger > div:before,
-                .hamburger > div:after {
-                    content: '';
-                    position: absolute;
-                    z-index: 1;
-                    top: -10px;
-                    width: 100%;
-                    height: 2px;
-                    background: inherit;
-                }
-
-                /* Moves Line Down */
-            .hamburger > div::after {
-                    top: 10px;
-                }
-                input[type=checkbox]:checked + .hamburger > div {
-                    transform: rotate(135deg);
-                }
-
-                /* Turns Lines Into X */
-                .toggler:checked + .hamburger > div:before,
-                .toggler:checked + .hamburger > div:after {
-                    top: 0;
-                    transform: rotate(90deg);
-                }
-
-
-            .toggler:checked ~ .navbar__links{
-                    display:flex;
-                }
-
-
-
+    &__brand-title {
+        font-weight: 400;
+        letter-spacing: 0;
+        padding-left: 20px;
+        font-size: calc(24px + 1 * ((100vw - 320px) / 680));
+        line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+        text-align: left;
+        text-transform: uppercase;
     }
 
-    @media screen and (max-width: 850px) {
-        .navbar {
-            flex-direction: column;
-            align-items: flex-start;
+    &__links {
+        font-weight: 200;
+        font-size: calc(16px + 1 * ((100vw - 320px) / 680));
+        line-height: calc(40px + 6 * ((100vw - 320px) / 680));
+        text-align: left;
+        padding-right: 20px;
+    }
 
-        .hamburger{display: flex;}
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
 
+    &__link {
+        list-style: none;
+        display: block;
+        text-decoration: none;
+        color: $white;
+        //border: 2px solid $primary-black;
+        border-radius: 20px;
+        padding: 0.2rem 25px;
+    }
 
-        &__brand-title{
+    &__link:hover {
+        border: 2px solid $secondary-color;
+        border-radius: 20px;
+    }
+
+    &__current {
+        border-bottom: 4px solid $primary-color;
+    }
+
+    .toggler {
+        position: absolute;
+        top: 0.2rem;
+        right: 1.5rem;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 1.5rem;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 0.5rem;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger > div {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+
+    /* Hamburger Lines - Top & Bottom */
+    .hamburger > div:before,
+    .hamburger > div:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+
+    /* Moves Line Down */
+    .hamburger > div::after {
+        top: 10px;
+    }
+    input[type="checkbox"]:checked + .hamburger > div {
+        transform: rotate(135deg);
+    }
+
+    /* Turns Lines Into X */
+    .toggler:checked + .hamburger > div:before,
+    .toggler:checked + .hamburger > div:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    .toggler:checked ~ .navbar__links {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .hamburger {
+            display: flex;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        &__brand-title {
             font-size: calc(22px + 6 * ((100vw - 320px) / 680));
             line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+            padding-bottom: 20px;
+            padding-top: 20px;
         }
 
         &__links {
             display: none;
             width: 100%;
-            font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+            font-size: calc(16px + 6 * ((100vw - 320px) / 680));
             line-height: calc(32px + 6 * ((100vw - 320px) / 680));
-
         }
 
         &__list {
             width: 100%;
             flex-direction: column;
-
         }
 
         &__link {
-            text-align: center;
-            padding: .5rem 1rem;
+            text-align: left;
+            padding: 20px;
+            border-top: 2px solid $primary-dark !important;
+            border-radius: unset;
         }
 
-
+        &__link:hover {
+            border: unset;
+            border-radius: unset;
+        }
     }
 }
