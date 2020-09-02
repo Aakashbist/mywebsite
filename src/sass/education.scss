@@ -1,56 +1,67 @@
 .education {
-  color: $text-color;
-  font-family: "Patrick Hand", sans-serif;
-  font-family: "Patrick Hand", sans-serif;
-  height: 100vh;
+  height: auto;
+  color: $secondary-black;
+  background: rgb(104, 103, 103);
+  background: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+  padding: 20px;
 
-  .container {
-    background-color: $primary-dark;
-    margin: 10px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-  }
   .topography {
+    color: $secondary-black;
     padding: 20px;
-    color: $white;
-    font-family: "Patrick Hand", sans-serif;
+    text-align: left;
     font-weight: 500;
     letter-spacing: 1;
     font-size: calc(52px + 1 * ((100vw - 320px) / 680));
     line-height: calc(40px + 6 * ((100vw - 320px) / 680));
   }
-  &__image {
-    justify-content: flex-end;
+  .card {
+    background-color: #d9d9d9;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    width: 100%;
+    margin: 40px;
+  }
+  .item {
+    display: flex;
     align-items: center;
-
-    max-width: 360px;
-  }
-  .content {
-    padding-left: 20px;
-    max-width: 360px;
-  }
-  .title {
-    color: $white;
-    font-family: "Patrick Hand", sans-serif;
-    font-weight: 800;
-    letter-spacing: 0;
-    font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-    line-height: calc(40px + 6 * ((100vw - 320px) / 680));
-    text-align: left;
+    justify-content: left;
+    max-width: 1100px;
+    margin: 10px auto;
+    color: $secondary-black;
+    margin-bottom: 2vh;
   }
 
-  &__statement_text {
-    width: 100vw;
-    color: $white;
-    font-family: "Patrick Hand", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0;
-    font-size: calc(24px + 1 * ((100vw - 320px) / 680));
-    line-height: calc(32px + 6 * ((100vw - 320px) / 680));
+  img {
+    margin: 50px 50px 50px 0;
+    padding-left: 40px;
+    max-width: 80%;
+  }
+  .info-text {
+    padding: 20px 20px 20px 0;
+    padding-left: 40px;
     text-align: left;
+    color: $secondary-black;
+  }
+  h1 {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    font-size: calc(25px + 1 * ((100vw - 320px) / 680));
+    line-height: calc(35px + 1 * ((100vw - 320px) / 680));
+  }
+
+  h2 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    font-size: calc(20px + 1 * ((100vw - 320px) / 680));
+    line-height: calc(25px + 1 * ((100vw - 320px) / 680));
+  }
+  p {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    font-size: calc(15px + 1 * ((100vw - 320px) / 680));
+    line-height: calc(25px + 1 * ((100vw - 320px) / 680));
   }
 }
 
@@ -58,19 +69,13 @@
   .education {
     .container {
       flex-direction: column;
-      align-content: space-evenly;
+      align-content: space-between;
       justify-items: center;
       text-align: left;
     }
-    .image {
-      max-width: 300px !important;
+    .img {
+      max-width: 200px !important;
       margin-bottom: 20px;
-    }
-
-    &__statement_text {
-      max-width: 80vw;
-      padding-left: 2vw !important;
-      padding-right: 2vw !important;
     }
   }
 }

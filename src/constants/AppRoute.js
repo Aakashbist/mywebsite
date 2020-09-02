@@ -1,4 +1,4 @@
-import Home from "../components/Pages/Home";
+import Home from "../components/Pages/LandingPage";
 import Education from "../components/Pages/education/Education";
 import Experience from "../components/Pages/experience/Experience";
 import Skill from "../components/Pages/skill/Skill";

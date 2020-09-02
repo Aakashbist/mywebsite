@@ -1,34 +1,41 @@
-import React from 'react';
-import { Grid, ListItemText, ListItemAvatar, Avatar, ListItem } from '@material-ui/core';
+import { Grid, Container } from "@material-ui/core";
+import React from "react";
 
 function Certification({ certification }) {
-
-    return (
-        <div className="container">
-
-            <div className="education__image">
-                <img src={certification.image} width="70%" />
-            </div>
-
-            <div className="content" >
-                <Grid  >
-                    <div >
-                        <Grid >
-                            <label className="title" >{certification.name}</label>
-                        </Grid>
-                        <Grid >
-                            <b><span className="education__statement_text">{certification.institute}</span></b>
-                        </Grid>
-                        <Grid >
-                            <b><span className="education__statement_text">{certification.year}</span></b>
-                        </Grid>
-                    </div>
-                </Grid>
-            </div>
-
-        </div>
-
-    )
+  return (
+    <Container>
+      <Grid container direction="row">
+        <Grid container direction="row" justify={"space-between"} spacing={3}>
+          <Grid
+            container
+            direction="row"
+            justify={"space-between"}
+            alignItems={"flex-start"}
+            className="card"
+          >
+            <Grid
+              container
+              direction="row"
+              justify={"space-between"}
+              alignItems={"center"}
+            ></Grid>
+            <Grid container item xs={12} sm={12} md={6} lg={6}>
+              <Grid container direction="row">
+                <img className="" src={certification.image} alt="" />
+              </Grid>
+            </Grid>
+            <Grid container item xs={12} sm={12} md={6} lg={6}>
+              <Grid container direction="column" className="info-text">
+                <h1> {certification.name} </h1>
+                <h2> {certification.institute} </h2>
+                <p> {certification.year} </p>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Container>
+  );
 }
 
 export default Certification;
